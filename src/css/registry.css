@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #ccc;
+    background-color: #f6f6f6;
+}
+
+.header {
+    height: 87px;
+}
+
+.header .area {
+    width: 980px;
+    height: 87px;
+    margin: 0 auto;
+    padding: 20px 0 10px;
+    border: 1px solid red;
+}
+
+.header .area .logo a {
+    float: left;
+    width: 232px;
+    height: 57px;
+    border: 1px solid red;
+}
+
+.header .area span {
+    float: right;
+}
