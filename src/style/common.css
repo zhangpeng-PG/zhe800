@@ -104,8 +104,14 @@ section {
     display: block;
 }
 
+html,
+body {
+    width: 100%;
+}
+
 body {
     line-height: 1;
+    min-width: 980px;
 }
 
 ol,

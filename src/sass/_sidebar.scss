@@ -6,6 +6,28 @@
     font-size: $font14;
 }
 
+%sidebar-rStyle {
+    width: 113px;
+    height: 93px;
+}
+
+%sidebar-r-aStyle {
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
+    color: red;
+    text-decoration: none;
+}
+
+%sidebar-r-spanStyle {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 10px auto;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
 .wrap {
     width: $pagewidth;
     background: url("https://z2.tuanimg.com/imagev2/site/1907x1080.7f94aef280e09f8b0023276b578b3925.jpg") center top;
@@ -38,6 +60,10 @@
         a {
             color: #333;
             text-decoration: none;
+            &:hover {
+                color: red;
+                text-decoration: underline;
+            }
         }
     }
     .sidebar-c {
@@ -45,8 +71,10 @@
         float: left;
         width: 951px;
         height: 300px;
+        overflow: hidden;
         .sidebar-cl {
             position: absolute;
+            display: none;
             width: 300px;
             height: 300px;
             top: 0;
@@ -54,27 +82,36 @@
             z-index: 10;
             background: red;
         }
+        ul {
+            li {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+            }
+        }
+        ol {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            margin-left: -40px;
+            height: 16px;
+            z-index: 3;
+            li {
+                display: block;
+                float: left;
+                margin-right: 5px;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: #fff;
+            }
+            .active {
+                background-color: red;
+            }
+        }
     }
     .sidebar-r {
-        %sidebar-rStyle {
-            width: 113px;
-            height: 93px;
-        }
-        %sidebar-r-aStyle {
-            display: block;
-            text-align: center;
-            padding-bottom: 10px;
-            color: red;
-            text-decoration: none;
-        }
-        %sidebar-r-spanStyle {
-            display: block;
-            width: 40px;
-            height: 40px;
-            margin: 10px auto;
-            border-radius: 25px;
-            cursor: pointer;
-        }
         float: left;
         width: 113px;
         height: 300px;

@@ -17,6 +17,73 @@
   margin-right: 0;
 }
 
+.suspend {
+  width: 100%;
+  height: 82px;
+  position: fixed;
+  top: -82px;
+  left: 0px;
+  z-index: 999;
+  background: #fff;
+}
+.suspend .suspend-c {
+  width: 1200px;
+  margin: 0 auto;
+}
+.suspend .suspend-t {
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 2px solid red;
+}
+.suspend .suspend-t-l li, .suspend .suspend-f .suspend-c li {
+  float: left;
+  height: 40px;
+  padding: 0 8px;
+}
+.suspend .suspend-t-l li a, .suspend .suspend-f .suspend-c li a {
+  color: #666;
+  font-size: 14px;
+  text-decoration: none;
+}
+.suspend .suspend-t-l li a:hover, .suspend .suspend-f .suspend-c li a:hover {
+  color: red;
+}
+.suspend .suspend-t-l li:nth-of-type(1), .suspend .suspend-f .suspend-c li:nth-of-type(1) {
+  font-weight: bold;
+}
+.suspend .suspend-t-r {
+  float: right;
+  height: 29px;
+  line-height: 30px;
+  margin-top: 5px;
+}
+.suspend .suspend-t-r .txt {
+  width: 113px;
+  padding: 0 0 0 10px;
+  background: #fff;
+  height: 27px;
+  line-height: 28px;
+  border: 1px solid #e60044;
+  outline: 0;
+  float: left;
+  color: #999;
+}
+.suspend .suspend-t-r .smt {
+  width: 82px;
+  height: 29px;
+  border: 0;
+  cursor: pointer;
+  background: url(//status.tuanimg.com/statics/zhe/common/img/index-common.png) -189px 0 no-repeat;
+  margin: 0 0 1px -1px;
+}
+.suspend .suspend-f {
+  height: 40px;
+}
+.suspend .suspend-f .suspend-c {
+  height: 40px;
+  line-height: 40px;
+}
+
 .waring {
   width: 100%;
   background: #fff5f8;
@@ -36,10 +103,7 @@
 .banner a {
   display: block;
   position: relative;
-  left: 50%;
   text-align: center;
-  margin-left: -1000px;
-  width: 2000px;
 }
 
 .shortcut {
@@ -70,6 +134,9 @@
 .shortcut .shortcut-c ul a {
   color: #999;
   text-decoration: none;
+}
+.shortcut .shortcut-c ul a:hover {
+  color: red;
 }
 
 .header {
@@ -131,7 +198,7 @@
 
 .nav {
   width: 1200px;
-  margin-left: 66px;
+  margin: 0 auto;
 }
 .nav ul {
   float: left;
@@ -150,7 +217,7 @@
 }
 .nav ul .nav-l {
   float: left;
-  width: 150px;
+  width: 136px;
   background: #e60044;
 }
 .nav ul .nav-l a {
@@ -170,6 +237,28 @@
   border-bottom: 1px solid #e0e0e0;
   background: #fff;
   font-size: 14px;
+}
+
+.sidebar .sidebar-r .sidebar-r-t, .sidebar .sidebar-r .sidebar-r-c, .sidebar .sidebar-r .sidebar-r-f {
+  width: 113px;
+  height: 93px;
+}
+
+.sidebar .sidebar-r .sidebar-r-t a, .sidebar .sidebar-r .sidebar-r-c a, .sidebar .sidebar-r .sidebar-r-f a {
+  display: block;
+  text-align: center;
+  padding-bottom: 10px;
+  color: red;
+  text-decoration: none;
+}
+
+.sidebar .sidebar-r .sidebar-r-t a span, .sidebar .sidebar-r .sidebar-r-c a span, .sidebar .sidebar-r .sidebar-r-f a span {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 10px auto;
+  border-radius: 25px;
+  cursor: pointer;
 }
 
 .wrap {
@@ -201,14 +290,20 @@
   color: #333;
   text-decoration: none;
 }
+.sidebar .sidebar-l a:hover {
+  color: red;
+  text-decoration: underline;
+}
 .sidebar .sidebar-c {
   position: relative;
   float: left;
   width: 951px;
   height: 300px;
+  overflow: hidden;
 }
 .sidebar .sidebar-c .sidebar-cl {
   position: absolute;
+  display: none;
   width: 300px;
   height: 300px;
   top: 0;
@@ -216,30 +311,37 @@
   z-index: 10;
   background: red;
 }
+.sidebar .sidebar-c ul li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.sidebar .sidebar-c ol {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -40px;
+  height: 16px;
+  z-index: 3;
+}
+.sidebar .sidebar-c ol li {
+  display: block;
+  float: left;
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.sidebar .sidebar-c ol .active {
+  background-color: red;
+}
 .sidebar .sidebar-r {
   float: left;
   width: 113px;
   height: 300px;
   background: #fff;
-}
-.sidebar .sidebar-r .sidebar-r-t, .sidebar .sidebar-r .sidebar-r-c, .sidebar .sidebar-r .sidebar-r-f {
-  width: 113px;
-  height: 93px;
-}
-.sidebar .sidebar-r .sidebar-r-t a, .sidebar .sidebar-r .sidebar-r-c a, .sidebar .sidebar-r .sidebar-r-f a {
-  display: block;
-  text-align: center;
-  padding-bottom: 10px;
-  color: red;
-  text-decoration: none;
-}
-.sidebar .sidebar-r .sidebar-r-t a span, .sidebar .sidebar-r .sidebar-r-c a span, .sidebar .sidebar-r .sidebar-r-f a span {
-  display: block;
-  width: 40px;
-  height: 40px;
-  margin: 10px auto;
-  border-radius: 25px;
-  cursor: pointer;
 }
 .sidebar .sidebar-r .sidebar-r-t a span {
   background: url(//status.tuanimg.com/statics/zhe/common/img/index-common.png) no-repeat -231px -34px;
@@ -343,12 +445,30 @@
   color: #fff;
 }
 .choice .choice-main-center li {
+  position: relative;
   float: left;
+  width: 118px;
+  margin: 0 1px;
+}
+.choice .choice-main-center li i {
+  position: absolute;
+  display: none;
+  width: 2px;
+  height: 40px;
+  top: 10px;
+  right: 0;
+  background: #999;
+}
+.choice .choice-main-center li img {
+  width: 100%;
+}
+.choice .choice-main-center li a {
+  display: block;
+}
+.choice .choice-main-center li a:hover i {
+  display: block;
 }
 
-.seckill {
-  height: 200px;
-}
 .seckill .seckill-top {
   height: 44px;
   border-bottom: 1px solid red;
@@ -366,10 +486,34 @@
   background-color: red;
   color: #fff;
 }
+.seckill .seckill-main li {
+  float: left;
+  width: 185px;
+  height: 250px;
+  margin-right: 18px;
+}
+.seckill .seckill-main li:last-of-type {
+  margin-right: 0;
+}
+.seckill .seckill-main li img {
+  width: 185px;
+}
+.seckill .seckill-main li .seckill-price {
+  color: red;
+}
+.seckill .seckill-main li .seckill-intro {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 6px;
+  width: 175px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+}
 
 .recommend .recommend-top {
   height: 44px;
-  border-bottom: 1px solid red;
 }
 .recommend .recommend-top .recommend-top-l {
   float: left;
@@ -582,7 +726,89 @@
   width: 100%;
 }
 .footer .footer-intro .footer-inro-img .footer-img1 {
-  margin-left: 550px;
+  margin: 0 14px 0 550px;
+}
+
+.column {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 34px;
+  background-color: #000;
+  height: 100%;
+  min-height: 594px;
+  z-index: 10001;
+  visibility: visible;
+  left: auto;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  text-align: center;
+}
+.column li {
+  position: relative;
+}
+.column .column-top1 {
+  cursor: pointer;
+  margin-top: 28px;
+  width: 34px;
+}
+.column .column-top1 a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+.column .column-top1 .column-gw {
+  margin: 8px auto;
+  font-size: 12px;
+  text-align: center;
+  width: 20px;
+}
+.column .column-top1 em {
+  display: block;
+  padding-bottom: 6px;
+  color: red;
+}
+.column .ct1 {
+  cursor: pointer;
+  width: 34px;
+  height: 42px;
+  line-height: 42px;
+  left: 0;
+}
+.column .ct1 a {
+  display: block;
+  color: #ddd;
+  text-decoration: none;
+}
+.column .icon-top {
+  width: 34px;
+  height: 42px;
+  background: url(//z5.tuanimg.com/v2/core/img/sidePanelIconsNew.png) no-repeat -554px 0;
+}
+.column .column-intro {
+  position: absolute;
+  display: none;
+  background: red;
+  top: 0;
+  right: 0;
+  border: 1px solid red;
+}
+.column .column-intro a {
+  display: block;
+  width: 100px;
+  height: 42px;
+}
+.column .column-intro:nth-of-type(7) a {
+  display: block;
+  width: 106px;
+  height: 144px;
+  background: url(//status.tuanimg.com/statics/zhe/components/sidebar/img/side_two_dimension.png) no-repeat 0 0;
+  margin-right: -2px;
+}
+
+.activecolor {
+  background: red;
 }
 
 /*# sourceMappingURL=index.css.map */
