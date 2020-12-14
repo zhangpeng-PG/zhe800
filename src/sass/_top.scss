@@ -1,0 +1,11 @@
+.waring {
+    width: $pagewidth;
+    background: #fff5f8;
+    color: #ec6060;
+    .waring-c {
+        width: $boxwidth;
+        margin: 0 auto;
+        padding: 8px 0;
+        font-size: $font12;
+    }
+}

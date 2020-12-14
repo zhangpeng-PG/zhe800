@@ -1,0 +1,26 @@
+.Pagination {
+    @extend %size;
+    .list-page {
+        width: 400px;
+        margin: 0 auto;
+        span {
+            display: block;
+            float: left;
+            margin: 10px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            &:first-of-type {
+                background: url(//status.tuanimg.com/statics/zhe/common/img/prev_nextpng.png) no-repeat -46px -32px;
+            }
+            &:last-of-type {
+                background: url(//status.tuanimg.com/statics/zhe/common/img/prev_nextpng.png) -46px 0;
+            }
+        }
+    }
+}
+
+.banner-footer {
+    @extend %size;
+    @extend %banner-img-style;
+}

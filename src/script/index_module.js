@@ -1,54 +1,32 @@
-define([], () => {
+define(['jlazyload'], () => {
     return {
         init: function() {
-            //代码实现
-            //1.鼠标移入左侧的li元素，显示右侧的大盒子。
-            const $list = $('.menu li');
-            const $cartlist = $('.cartlist');
-            const $items = $('.item');
-            $list.hover(function() {
-                $cartlist.show();
-                $(this).addClass('active').siblings('li').removeClass('active');
-                //切换内容发生改变，不同的li对应不同的内容块。
-                $items.eq($(this).index()).show().siblings('.item').hide();
-
-                //改变右侧的大盒子的位置
-                let $scrolltop = $(window).scrollTop();
-                let $bannertop = $('.banner').offset().top;
-                if ($scrolltop > $bannertop) {
-                    $cartlist.css({
-                        top: $scrolltop - $bannertop
+            const $update = $(".updated-main");
+            $.ajax({
+                url: "http://10.31.161.111:8080/dashboard/zhe800/php/listdata.php",
+                dataType: 'json'
+            }).done(function(date) {
+                let $strhtml = '';
+                $.each(date, function(index, value) {
+                    console.log(value);
+                    $strhtml += `
+                        <li>
+                            <a href="detail.html?sid=${value.sid}">
+                            <img class = "lazy" data-original="${value.url}" width="283" height="283"/>
+                            <p>${value.title}</p>
+                            <span>￥${value.price}</span>
+                            </a>
+                        </li>
+                    `;
+                });
+                console.log($strhtml);
+                $update.html($strhtml);
+                $(function() {
+                    $("img.lazy").lazyload({
+                        effect: "fadeIn"
                     });
-                } else {
-                    $cartlist.css({
-                        top: 0
-                    });
-                }
-            }, function() {
-                $cartlist.hide();
-            });
-
-            //2.鼠标移入右侧的大盒子，大盒子依然显示隐藏
-            $cartlist.hover(function() {
-                $(this).show();
-            }, function() {
-                $(this).hide();
-            });
-
-
-            //检测是否用户已经登录
-            if (localStorage.getItem('loginname')) {
-                $('.admin').show();
-                $('.login').hide();
-                $('.admin span').html(localStorage.getItem('loginname'));
-            }
-
-            //退出登录 - 删除本地存储
-            $('.admin a').on('click', function() {
-                $('.admin').hide();
-                $('.login').show();
-                localStorage.removeItem('loginname');
-            });
+                });
+            })
 
         }
     }

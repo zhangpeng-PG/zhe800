@@ -19,7 +19,8 @@ define(['jlazyload'], () => {
                         </li>
                     `;
                 });
-                $list.html($strhtml);
+
+                // $list.html($strhtml);
                 //渲染的下面进行懒加载操作
                 $(function() { //页面加载完成
                     $("img.lazy").lazyload({

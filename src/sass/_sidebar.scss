@@ -1,0 +1,116 @@
+%liststyle {
+    height: 29px;
+    line-height: 29px;
+    border-bottom: 1px solid #e0e0e0;
+    background: #fff;
+    font-size: $font14;
+}
+
+.wrap {
+    width: $pagewidth;
+    background: url("https://z2.tuanimg.com/imagev2/site/1907x1080.7f94aef280e09f8b0023276b578b3925.jpg") center top;
+}
+
+.sidebar {
+    position: relative;
+    @extend %size;
+    height: 300px;
+    .sidebar-l {
+        float: left;
+        width: 136px;
+        li {
+            @extend %liststyle;
+            padding-left: 30px;
+            &>:nth-child(even) {
+                padding-left: 14px;
+            }
+        }
+        .sidebar-la {
+            @extend %liststyle;
+            padding: 0 3px 0 6px;
+            span {
+                padding-left: 3px;
+            }
+        }
+        .sidebar-lb {
+            @extend .sidebar-la;
+        }
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+    }
+    .sidebar-c {
+        position: relative;
+        float: left;
+        width: 951px;
+        height: 300px;
+        .sidebar-cl {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            background: red;
+        }
+    }
+    .sidebar-r {
+        %sidebar-rStyle {
+            width: 113px;
+            height: 93px;
+        }
+        %sidebar-r-aStyle {
+            display: block;
+            text-align: center;
+            padding-bottom: 10px;
+            color: red;
+            text-decoration: none;
+        }
+        %sidebar-r-spanStyle {
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin: 10px auto;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        float: left;
+        width: 113px;
+        height: 300px;
+        background: #fff;
+        .sidebar-r-t {
+            @extend %sidebar-rStyle;
+            a {
+                @extend %sidebar-r-aStyle;
+                span {
+                    @extend %sidebar-r-spanStyle;
+                    background: url(//status.tuanimg.com/statics/zhe/common/img/index-common.png) no-repeat -231px -34px;
+                }
+            }
+        }
+        .sidebar-r-c {
+            @extend %sidebar-rStyle;
+            a {
+                @extend %sidebar-r-aStyle;
+                span {
+                    @extend %sidebar-r-spanStyle;
+                    background: url(//status.tuanimg.com/statics/zhe/common/img/index-common.png) no-repeat -231px -82px;
+                }
+            }
+        }
+        .sidebar-r-f {
+            @extend %sidebar-rStyle;
+            a {
+                @extend %sidebar-r-aStyle;
+                span {
+                    @extend %sidebar-r-spanStyle;
+                }
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+}

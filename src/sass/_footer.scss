@@ -1,0 +1,141 @@
+//底部 
+%footer-style {
+    float: left;
+    text-align: left;
+    padding: 28px 60px 0 0;
+    height: 270px;
+    line-height: 24px;
+}
+
+.footer {
+    @extend %size;
+    width: $pagewidth;
+    border-top: 2px solid red;
+    .footer-c {
+        @extend %size;
+        .w1 {
+            @extend %footer-style;
+            width: 140px;
+            span {
+                display: block;
+            }
+            a {
+                display: block;
+                font-size: $font12;
+                text-decoration: none;
+                color: #999;
+            }
+            .about {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 14px;
+                background: url('//status.tuanimg.com/statics/zhe/common/img/foot_icon.png') no-repeat;
+            }
+            .short {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 14px;
+                background: url(//status.tuanimg.com/statics/zhe/common/img/foot_icon.png) no-repeat -95px 0;
+            }
+        }
+        .protect {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 14px;
+            background: url(//status.tuanimg.com/statics/zhe/common/img/foot_icon.png) no-repeat 0 -95px;
+        }
+        .compare {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 14px;
+            background: url(//status.tuanimg.com/statics/zhe/common/img/foot_icon.png) no-repeat -190px 0;
+        }
+    }
+    .w2 {
+        @extend %footer-style;
+        color: #999;
+        font-size: $font12;
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: #999;
+            &:hover {
+                text-decoration: underline;
+                color: red;
+            }
+        }
+        .more {
+            display: block;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 14px;
+            background: url(//status.tuanimg.com/statics/zhe/common/img/foot_icon.png) no-repeat -95px -95px;
+        }
+    }
+    .w3 {
+        @extend %footer-style;
+        padding-right: 0;
+        font-size: $font14;
+        .footer-img {
+            margin-top: 6px;
+            width: 104px;
+            height: 220px;
+            margin: 0 auto;
+            background: url(//status.tuanimg.com/statics/zhe/common/img/footer_code.png) 0 0 no-repeat;
+        }
+    }
+    .footer-for-bg {
+        width: 750px;
+        height: 20px;
+        line-height: 20px;
+        font-size: $font14;
+        margin: 0 auto;
+        overflow: hidden;
+        span {
+            float: left;
+        }
+        .footer-for-bga {
+            float: left;
+        }
+        a {
+            font-size: $font14;
+            color: #999;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .footer-for-bgr {
+            float: right;
+        }
+    }
+    .footer-intro {
+        @extend %size;
+        text-align: center;
+        p {
+            margin: 26px auto;
+            color: #999;
+            font-size: $font12;
+        }
+        a {
+            color: #999;
+            font-size: $font12;
+            text-decoration: none;
+        }
+        .footer-inro-img {
+            text-align: center;
+            span {
+                float: left;
+                display: block;
+                width: 30px;
+                height: 28px;
+                img {
+                    width: 100%
+                }
+            }
+            .footer-img1 {
+                margin-left: 550px;
+            }
+        }
+    }
+}

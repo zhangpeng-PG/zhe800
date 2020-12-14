@@ -1,0 +1,34 @@
+.nav {
+    width: $boxwidth;
+    margin-left: 66px;
+    ul {
+        float: left;
+        li {
+            float: left;
+            width: 130px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            a {
+                display: block;
+                text-decoration: none;
+                color: #696969;
+            }
+        }
+        .nav-l {
+            float: left;
+            width: 150px;
+            background: #e60044;
+            a {
+                color: #fff;
+            }
+        }
+    }
+    .nav-r {
+        float: right;
+        width: 126px;
+        height: 40px;
+        cursor: pointer;
+        background: url("//z3.tuanimg.com/imagev2/site/126x34.31dcb164756e442506db73bd7457c8f7.gif") no-repeat center;
+    }
+}

@@ -1,0 +1,12 @@
+.banner {
+    width: $pagewidth;
+    overflow-x: hidden;
+    a {
+        display: block;
+        position: relative;
+        left: 50%;
+        text-align: center;
+        margin-left: -1000px;
+        width: 2000px;
+    }
+}
