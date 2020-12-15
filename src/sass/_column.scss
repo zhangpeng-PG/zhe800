@@ -57,10 +57,9 @@
         .column-intro {
             position: absolute;
             display: none;
-            background: red;
+            background: tomato;
             top: 0;
             right: 0;
-            border: 1px solid red;
             a {
                 display: block;
                 width: 100px;
@@ -76,8 +75,11 @@
                 }
             }
         }
+        // .column-btn {
+        //     display: none;
+        // }
     }
     
     .activecolor {
-        background: red;
+        background: tomato;
     }

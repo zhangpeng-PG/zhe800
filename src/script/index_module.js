@@ -3,7 +3,7 @@ define(['jlazyload'], () => {
         init: function() {
             const $update = $(".updated-main");
             const $lunbo = $(".sidebar-c");
-            const $lunbopic = $(".sidebar-c ul li");
+            const $lunbopic = $(".sidebar-c .sidebarpic li");
             const $btnlist = $(".sidebar-c ol li");
             const $sidelist = $(".sidebar-l ul .sidebar-li");
             const $sidebarcl = $(".sidebar-cl");
@@ -85,6 +85,7 @@ define(['jlazyload'], () => {
                         $suspend.stop(true).animate({
                             top: 0
                         })
+
                     } else {
                         $suspend.stop(true).animate({
                             top: -82
@@ -109,11 +110,10 @@ define(['jlazyload'], () => {
                 });
             //最下角点击
             const $columnbtn = $(".column-btn");
-            $(window).on("scroll", function() {
-                var $scrolltop = $(window).scrollTop
-            })
             $columnbtn.on("click", function() {
-                $("html").offset().top = 0;
+                $("html").stop(true).animate({
+                    top: 0
+                })
             })
 
         }

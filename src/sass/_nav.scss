@@ -1,6 +1,7 @@
 .nav {
     width: $boxwidth;
     margin: 0 auto;
+    height: 42px;
     ul {
         float: left;
         li {
@@ -30,5 +31,11 @@
         height: 40px;
         cursor: pointer;
         background: url("//z3.tuanimg.com/imagev2/site/126x34.31dcb164756e442506db73bd7457c8f7.gif") no-repeat center;
+    }
+    .nav-b {
+        &:hover {
+            box-shadow: 0 6px 6px #ccc;
+            border-bottom: 2px solid red;
+        }
     }
 }

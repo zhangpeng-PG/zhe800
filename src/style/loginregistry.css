@@ -4,29 +4,219 @@
 }
 
 body {
-    color: #ccc;
-    background-color: #f6f6f6;
+    background-color: #f5f5f5;
+    min-width: 980px;
+    font: 12px;
 }
 
-.header {
-    height: 87px;
-}
-
-.header .area {
-    width: 980px;
-    height: 87px;
+.login-header {
+    clear: both;
     margin: 0 auto;
-    padding: 20px 0 10px;
-    border: 1px solid red;
+    width: 980px;
+    padding: 20px 0 0;
+    overflow: hidden;
 }
 
-.header .area .logo a {
+.login-header .header-pic {
     float: left;
-    width: 232px;
-    height: 57px;
-    border: 1px solid red;
 }
 
-.header .area span {
+.login-header-r {
+    color: #666;
+    margin-bottom: 13px;
     float: right;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.login-header-r a {
+    color: #0078c6;
+    text-decoration: none;
+}
+
+.login-main {
+    clear: both;
+    margin: 10px auto;
+    width: 980px;
+    overflow: hidden;
+    height: 550px;
+    background-color: #fff;
+}
+
+.login-main-left {
+    float: left;
+    text-align: center;
+    font-size: 14px;
+}
+
+.login-main-leftc {
+    width: 460px;
+    height: 330px;
+    margin-top: 60px;
+    margin-left: 90px;
+}
+
+.login-main-right {
+    float: right;
+    width: 340px;
+    height: 330px;
+    text-align: left;
+    margin-right: 90px;
+    margin-top: 60px;
+}
+
+.login-mian-rightc {
+    position: relative;
+    border: 1px solid #e5e5e5;
+    height: 420px;
+}
+
+.login-notices {
+    color: #e60044;
+    font-size: 12px;
+    position: absolute;
+    right: 22px;
+    top: 8px;
+    text-align: center;
+    width: 101px;
+    height: 20px;
+    line-height: 20px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGUAAAAUCAMAAACj3AOZAAAAV1BMVEUAAADpBj/qBkfpBj/pBj/sHVzsB03qBkDpBj/pBj/pBj/pBj/pBj/pBkHpBj/pBj/pBj/pBj/////pBj/pBkH7w9T6vM/+9/n96e/81+LvOnDvNW3qBkuHdsOeAAAAEnRSTlMA5vNJPf755+fktKWCYEQ2BwH13UNNAAAAiElEQVQ4y92V2QqEMAxF7dSZcV+6uP//dyreh4AiPt2CHmhJ04dDG0girSxwWIixCXdHcL5XOtpR3hDxChZrqNiQFndIP/ItLg5h6X4lLFzGb9HyLWaY8wbVp9JPWQBL96l5PyaSmFkXkdAtfpPwLUv1um7JtgSZYgks+n8zVCWQ6IS7yKaYyCsOvYkINOf67gAAAABJRU5ErkJggg==) center no-repeat;
+}
+
+.hwid2 {
+    padding-left: 20px;
+    margin-top: 36px;
+    font-size: 12px;
+}
+
+.login_mid {
+    padding-left: 20px;
+}
+
+.login_mid .login-p {
+    display: block;
+    width: 240px;
+    height: 32px;
+    outline: 0;
+    border: 1px solid #ccc;
+    margin: 26px auto 13px 0;
+}
+
+.slide-box,
+.registry-slide-box {
+    position: relative;
+    width: 240px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background: #ccc;
+    margin: 26px auto 30px;
+    font-size: 12px;
+}
+
+.slide,
+.registry-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #eee;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    font-size: 12px;
+}
+
+.login_mid .smt {
+    outline: 0;
+    border: 0;
+    width: 122px;
+    height: 42px;
+    background: url(//z5.tuanimg.com/v1/login/img/login_signin.png) no-repeat 0 0;
+}
+
+.forgetpwd {
+    margin-left: 50px;
+    color: #333;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.footer-intro {
+    text-align: center;
+    font-size: 12px;
+}
+
+.footer-intro p {
+    line-height: 30px;
+}
+
+.footer-intro a {
+    color: #333;
+    text-decoration: none;
+}
+
+.registry-main {
+    border: 1px solid red;
+    background: #fff;
+    padding: 40px 60px;
+    width: 860px;
+    margin: 0 auto;
+}
+
+.registry-main-l {
+    border: 1px solid red;
+    width: 360px;
+    font-size: 14px;
+}
+
+.registry-main-l span {
+    display: block;
+    margin-left: 105px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.registry-p {
+    border: 1px solid red;
+    margin: 10px;
+    width: 240px;
+    height: 32px;
+    text-align: right;
+}
+
+.registry-a {
+    border: 1px solid red;
+    padding-left: 42px;
+}
+
+.registry-b {
+    border: 1px solid red;
+    padding-left: 54px;
+}
+
+.registry-c {
+    border: 1px solid red;
+    padding-left: 92px;
+}
+
+.registry-smtp {
+    text-align: center;
+}
+
+.registry-smt {
+    margin-left: 70px;
+    width: 200px;
+    height: 46px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: red;
+    color: #fff;
+    outline: 0;
+    border: 1px solid red;
+    border-radius: 6px;
+}
+
+.registry-slide-box {
+    margin: 15px auto;
 }

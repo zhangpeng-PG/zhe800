@@ -13,21 +13,58 @@
 </head>
 
 <body>
-    <div class="header">
-        <div class="area">
-            <div class="logo">
-                <a href="http://www.zhe800.com/"></a>
-            </div>
-            <span>
-                    已经有团800或折800帐号了？<a href=" login.html ">去登陆</a></span>
+    <!-- 头部 -->
+    <div class="login-header">
+        <a href="#" target="_blank" class="header-pic">
+            <img src="//status.tuanimg.com/statics/zhe/dealList/img/login_logo.jpg" alt="">
+        </a>
+        <p class="login-header-r">
+            <span>还没有账号?</span>
+            <a href="registry.html" target="_blank">立即注册</a>
+        </p>
+    </div>
+    <!-- 主体 -->
+    <div class="registry-main">
+        <div class="registry-main-l">
+            <form action="">
+                <div class="registry-a"> <label for="">手机号:</label> <input type="text" class="registry-p"></div>
+                <span>为了你的账号安全，请使用常用的手机号</span>
+                <div class="registry-b"><label for="">密码:</label> <input type="password" class="registry-p"></div>
+                <span>6-24位数字字母或者半角符号组成</span>
+                <div class="registry-c"><label for="">确认密码:</label> <input type="password" class="registry-p"></div>
+                <span>请再次输入密码</span>
+                <!-- 滑块 -->
+                <div class="registry-slide-box">
+                    请按住滑块，拖动到最右边
+                    <div class="registry-slide">>></div>
+                </div>
+                <p class="registry-smtp">
+                    <input checked="checked" id="inputacc" type="checkbox"> 我已阅读并接受折800的
+                    <a target="_blank" href="http://help.zhe800.com/detail/82">《用户服务协议》</a> </p>
+                <input type="submit" value="同意协议并注册" class="registry-smt">
+            </form>
         </div>
     </div>
-    <form action="http://localhost:8080/dashboard/zhe800/php/reg.php " method="post ">
+    <!-- 尾部 -->
+    <div class="footer-intro ">
+        <p>
+            <a href="# ">京ICP证120075号</a>
+            <span> 京ICP备10051110号-5 
+                        </span>
+            <a href="# ">京公网安备11010502025623 </a>
+            <span> 统一社会信用代码 9111010557129826 </span>
+            <span> 食品流通许可证SP1101051510352397</span>
+        </p>
+
+    </div>
+
+
+    <!-- <form action="http://localhost:8080/dashboard/zhe800/php/reg.php " method="post ">
         <p><label for=" ">用户名：</label><input type="text " name="username " id="username "><span></span></p>
         <p><label for=" ">密　码：</label><input type="password " name="password "></p>
         <p><label for=" ">邮　箱：</label><input type="text " name="email "></p>
         <p><input type="submit " value="提交注册 " name="submit " id="submit "></p>
-    </form>
+    </form> -->
 </body>
 
 </html>

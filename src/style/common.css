@@ -144,3 +144,451 @@ table {
     clear: both;
     visibility: hidden;
 }
+
+.waring {
+    width: 100%;
+    background: #fff5f8;
+    color: #ec6060;
+}
+
+.waring-c {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 8px 0;
+    font-size: 12px;
+}
+
+.shortcut {
+    background: #fafafa;
+    width: 100%;
+}
+
+.shortcut .shortcut-c {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.shortcut .shortcut-c ul {
+    position: absolute;
+    right: 0;
+}
+
+.shortcut .shortcut-c ul li {
+    float: left;
+}
+
+.shortcut .shortcut-c ul :nth-child(even) {
+    width: 1px;
+    height: 12px;
+    margin: 9px 12px;
+    background: #ccc;
+}
+
+.shortcut .shortcut-c ul a {
+    color: #999;
+    text-decoration: none;
+}
+
+.shortcut .shortcut-c ul a:hover {
+    color: red;
+}
+
+.header {
+    height: 77px;
+    width: 1200px;
+    margin: 0 auto 30px;
+}
+
+.header .header-logo {
+    float: left;
+    width: 225px;
+    height: 55px;
+    margin-top: 24px;
+    margin-right: 30px;
+    background: url(//status.tuanimg.com/statics/zhe/common/img/logo_zhe800_new.png) center center no-repeat;
+}
+
+.header .header-search {
+    border: 2px solid red;
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    margin-top: 39px;
+}
+
+.header .header-search .header-search-l {
+    float: left;
+    width: 111px;
+    background: url(//status.tuanimg.com/statics/zhe/common/img/index-common.png) -34px -34px no-repeat;
+}
+
+.header .header-search .header-search-l span {
+    padding-left: 32px;
+    font-size: 19px;
+    color: #fff;
+}
+
+.header .header-search .headre-search-c {
+    float: left;
+    width: 375px;
+    height: 24px;
+    outline: 0;
+    border: 0;
+    padding: 5px 0 5px 10px;
+    background: #fff;
+    text-align: left;
+}
+
+.header .header-search .header-search-s {
+    float: left;
+    width: 48px;
+    height: 24px;
+    cursor: pointer;
+    margin-top: 8px;
+    outline: 0;
+    border: 0;
+    background: url(//status.tuanimg.com/statics/zhe/common/img/index-common.png) -34px 0 no-repeat;
+}
+
+.header .header-r {
+    float: right;
+    width: 340px;
+    height: 40px;
+    margin-top: 34px;
+    background: url("//status.tuanimg.com/statics/zhe/common/img/head_three_icon.png");
+}
+
+.nav {
+    width: 1200px;
+    height: 42px;
+    margin: 0 auto;
+}
+
+.nav ul {
+    float: left;
+}
+
+.nav ul li {
+    float: left;
+    width: 130px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #696969;
+}
+
+.nav ul .nav-l {
+    float: left;
+    width: 136px;
+    background: #e60044;
+}
+
+.nav .nav-b:hover {
+    box-shadow: 0 6px 6px #ccc;
+    border-bottom: 2px solid red;
+}
+
+.nav ul .nav-l a {
+    color: #fff;
+}
+
+.nav .nav-r {
+    float: right;
+    width: 126px;
+    height: 40px;
+    cursor: pointer;
+    background: url("//z3.tuanimg.com/imagev2/site/126x34.31dcb164756e442506db73bd7457c8f7.gif") no-repeat center;
+}
+
+.banner-footer,
+.footer,
+.footer .footer-c,
+.footer .footer-intro {
+    width: 1200px;
+    /* height: 400px; */
+    /* border: 1px solid red; */
+    margin: 0 auto 30px;
+}
+
+.banner-footer li {
+    float: left;
+    width: 232px;
+    height: 159px;
+    margin-right: 10px;
+    float: left;
+}
+
+.banner-footer li img {
+    width: 100%;
+}
+
+.banner-footer li:last-of-type {
+    margin-right: 0;
+}
+
+.footer .footer-c .w1,
+.footer .w2,
+.footer .w3 {
+    float: left;
+    text-align: left;
+    padding: 28px 60px 0 0;
+    height: 270px;
+    line-height: 24px;
+}
+
+.footer {
+    width: 100%;
+    border-top: 2px solid red;
+}
+
+.footer .footer-c .w1 {
+    width: 140px;
+}
+
+.footer .footer-c .w1 span {
+    display: block;
+}
+
+.footer .footer-c .w1 a {
+    display: block;
+    font-size: 12px;
+    text-decoration: none;
+    color: #999;
+}
+
+.footer .footer-c .w1 .about {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 14px;
+    background: url("//status.tuanimg.com/statics/zhe/common/img/foot_icon.png") no-repeat;
+}
+
+.footer .footer-c .w1 .short {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 14px;
+    background: url(//status.tuanimg.com/statics/zhe/common/img/foot_icon.png) no-repeat -95px 0;
+}
+
+.footer .footer-c .protect {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 14px;
+    background: url(//status.tuanimg.com/statics/zhe/common/img/foot_icon.png) no-repeat 0 -95px;
+}
+
+.footer .footer-c .compare {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 14px;
+    background: url(//status.tuanimg.com/statics/zhe/common/img/foot_icon.png) no-repeat -190px 0;
+}
+
+.footer .w2 {
+    color: #999;
+    font-size: 12px;
+}
+
+.footer .w2 a {
+    display: inline-block;
+    text-decoration: none;
+    color: #999;
+}
+
+.footer .w2 a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+.footer .w2 .more {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 14px;
+    background: url(//status.tuanimg.com/statics/zhe/common/img/foot_icon.png) no-repeat -95px -95px;
+}
+
+.footer .w3 {
+    padding-right: 0;
+    font-size: 14px;
+}
+
+.footer .w3 .footer-img {
+    margin-top: 6px;
+    width: 104px;
+    height: 220px;
+    margin: 0 auto;
+    background: url(//status.tuanimg.com/statics/zhe/common/img/footer_code.png) 0 0 no-repeat;
+}
+
+.footer .footer-for-bg {
+    width: 750px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.footer .footer-for-bg span {
+    float: left;
+}
+
+.footer .footer-for-bg .footer-for-bga {
+    float: left;
+}
+
+.footer .footer-for-bg a {
+    font-size: 14px;
+    color: #999;
+    text-decoration: none;
+}
+
+.footer .footer-for-bg a:hover {
+    text-decoration: underline;
+}
+
+.footer .footer-for-bg .footer-for-bgr {
+    float: right;
+}
+
+.footer .footer-intro {
+    text-align: center;
+}
+
+.footer .footer-intro p {
+    margin: 26px auto;
+    color: #999;
+    font-size: 12px;
+}
+
+.footer .footer-intro a {
+    color: #999;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.footer .footer-intro .footer-inro-img {
+    text-align: center;
+}
+
+.footer .footer-intro .footer-inro-img span {
+    float: left;
+    display: block;
+    width: 30px;
+    height: 28px;
+}
+
+.footer .footer-intro .footer-inro-img span img {
+    width: 100%;
+}
+
+.footer .footer-intro .footer-inro-img .footer-img1 {
+    margin: 0 14px 0 550px;
+}
+
+.column {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 34px;
+    background-color: #000;
+    height: 100%;
+    min-height: 594px;
+    z-index: 10001;
+    visibility: visible;
+    left: auto;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    text-align: center;
+}
+
+.column li {
+    position: relative;
+}
+
+.column .column-top1 {
+    cursor: pointer;
+    margin-top: 28px;
+    width: 34px;
+}
+
+.column .column-top1 a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.column .column-top1 .column-gw {
+    margin: 8px auto;
+    font-size: 12px;
+    text-align: center;
+    width: 20px;
+}
+
+.column .column-top1 em {
+    display: block;
+    padding-bottom: 6px;
+    color: red;
+}
+
+.column .ct1 {
+    cursor: pointer;
+    width: 34px;
+    height: 42px;
+    line-height: 42px;
+    left: 0;
+}
+
+.column .ct1 a {
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+}
+
+.column .icon-top {
+    width: 34px;
+    height: 42px;
+    background: url(//z5.tuanimg.com/v2/core/img/sidePanelIconsNew.png) no-repeat -554px 0;
+}
+
+.column .column-intro {
+    position: absolute;
+    display: none;
+    background: tomato;
+    top: 0;
+    right: 0;
+    border: 1px solid red;
+}
+
+.column .column-intro a {
+    display: block;
+    width: 100px;
+    height: 42px;
+}
+
+.column .column-intro:nth-of-type(7) a {
+    display: block;
+    width: 106px;
+    height: 144px;
+    background: url(//status.tuanimg.com/statics/zhe/components/sidebar/img/side_two_dimension.png) no-repeat 0 0;
+    margin-right: -2px;
+}
+
+.column .column-btn {
+    display: none;
+}
+
+.activecolor {
+    background: tomato;
+}

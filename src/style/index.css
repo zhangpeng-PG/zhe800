@@ -199,6 +199,7 @@
 .nav {
   width: 1200px;
   margin: 0 auto;
+  height: 42px;
 }
 .nav ul {
   float: left;
@@ -229,6 +230,10 @@
   height: 40px;
   cursor: pointer;
   background: url("//z3.tuanimg.com/imagev2/site/126x34.31dcb164756e442506db73bd7457c8f7.gif") no-repeat center;
+}
+.nav .nav-b:hover {
+  box-shadow: 0 6px 6px #ccc;
+  border-bottom: 2px solid red;
 }
 
 .sidebar .sidebar-l li, .sidebar .sidebar-l .sidebar-la, .sidebar .sidebar-l .sidebar-lb {
@@ -304,14 +309,27 @@
 .sidebar .sidebar-c .sidebar-cl {
   position: absolute;
   display: none;
-  width: 300px;
-  height: 300px;
+  width: 370px;
+  height: 303px;
   top: 0;
   left: 0;
   z-index: 10;
-  background: red;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  padding-left: 13px;
+  transition: top 0.3s ease;
 }
-.sidebar .sidebar-c ul li {
+.sidebar .sidebar-c .sidebar-cl .cartlist {
+  display: none;
+}
+.sidebar .sidebar-c .sidebar-cl .cartlist .cartlist-l a {
+  color: red;
+  text-decoration: none;
+}
+.sidebar .sidebar-c .sidebar-cl h3 {
+  border-bottom: 1px solid red;
+}
+.sidebar .sidebar-c .sidebarpic li {
   position: absolute;
   top: 0;
   left: 0;
@@ -789,10 +807,9 @@
 .column .column-intro {
   position: absolute;
   display: none;
-  background: red;
+  background: tomato;
   top: 0;
   right: 0;
-  border: 1px solid red;
 }
 .column .column-intro a {
   display: block;
@@ -808,7 +825,7 @@
 }
 
 .activecolor {
-  background: red;
+  background: tomato;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -4,7 +4,7 @@ $result = $conn->query("select * from taobaogoods"); //获取数据的结果集(
 $num = $result->num_rows; //记录集的总条数
 
 
-$pagesize = 10; //单个页面展示的数据条数
+$pagesize = 15; //单个页面展示的数据条数
 
 $pagenum = ceil($num / $pagesize); //获取页数，一定选择向上取整。 3页
 
@@ -31,13 +31,12 @@ for ($i = 0; $i < $res->num_rows; $i++) {
 
 
 //输出接口
-class pagedata{
+class listdata{
 
 };
+$list = new listdata();
+$list->pageno =$pagenum;
+$list->pagedata = $arr;
 
-$page = new pagedata();
-$page->pagesize =$pagenum;
-$page->pagecontent = $arr;
 
-
-echo json_encode($page);
+echo json_encode($list);
