@@ -22,6 +22,12 @@ input {
     position: relative;
 }
 
+.nav-warp {
+    width: 100%;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
 #spic {
     width: 400px;
     height: 400px;
@@ -142,7 +148,10 @@ input {
 }
 
 .goodsinfo {
-    margin: 100px 0 0 100px;
+    width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+    /* border: 1px solid red; */
 }
 
 .goodsinfo-img {
@@ -220,5 +229,4 @@ input {
     position: absolute;
     right: 50px;
     top: 50px;
-    border: 1px solid red;
 }

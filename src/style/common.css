@@ -565,10 +565,9 @@ table {
 .column .column-intro {
     position: absolute;
     display: none;
-    background: tomato;
+    background: #c7000b;
     top: 0;
     right: 0;
-    border: 1px solid red;
 }
 
 .column .column-intro a {
@@ -585,10 +584,13 @@ table {
     margin-right: -2px;
 }
 
-.column .column-btn {
-    display: none;
-}
+
+/* .column .column-btn {
+    /* display: none; */
+
+
+/* }  */
 
 .activecolor {
-    background: tomato;
+    background: #c7000b;
 }
