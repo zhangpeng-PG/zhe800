@@ -1,29 +1,6 @@
 define(['jcookie'], () => {
     return {
         init: function() {
-            //右边栏动画
-            const $columnlist = $(".column li");
-            const $columnintro = $(".column-intro");
-            $columnlist.hover(function() {
-                    $columnlist.eq($(this).index()).addClass("activecolor").siblings("li").removeClass("activecolor");
-                    $columnlist.eq($(this).index()).find("em").css("color", "#fff");
-                    if ($(this).index() - 1 < 0) {
-                        $columnintro.eq($(this).index() - 1).hide();
-                    }
-                    $columnintro.eq($(this).index() - 1).show();
-                },
-                function() {
-                    $columnlist.eq($(this).index()).removeClass("activecolor");
-                    $columnlist.eq($(this).index()).find("em").css("color", "red");
-                    $columnintro.eq($(this).index() - 1).hide();
-                });
-            //最下角点击
-            const $columnbtn = $(".column-btn");
-            $columnbtn.on("click", function() {
-                $("html").stop(true).animate({
-                    top: 0
-                })
-            })
             let $sid = location.search.substring(1).split("=")[1];
             if (!$sid) {
                 $sid = 1;
@@ -131,6 +108,9 @@ define(['jcookie'], () => {
                 if ($.cookie('cookiesid') && $.cookie('cookienum')) {
                     arrsid = $.cookie('cookiesid').split(',');
                     arrnum = $.cookie('cookienum').split(',');
+                } else {
+                    arrsid = [];
+                    arrnum = [];
                 }
             }
 
@@ -150,6 +130,20 @@ define(['jcookie'], () => {
             });
             getcookietoarray();
             $(".column-top1 em").html(arrsid.length);
+            const $columnbtn = $(".column-btn");
+            $(window).on("scroll", () => {
+                let $scrolltop = $(window).scrollTop();
+                if ($scrolltop >= 400) {
+                    $columnbtn.show();
+                } else {
+                    $columnbtn.hide();
+                }
+            });
+            $columnbtn.on("click", function() {
+                $("html").stop(true).animate({
+                    top: 0
+                })
+            });
         }
     }
 });

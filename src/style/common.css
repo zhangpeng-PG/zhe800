@@ -496,7 +496,8 @@ table {
     margin: 0 14px 0 550px;
 }
 
-.column {
+
+/* .column {
     position: fixed;
     bottom: 0;
     right: 0;
@@ -515,15 +516,15 @@ table {
 
 .column li {
     position: relative;
+    cursor: pointer;
 }
 
 .column .column-top1 {
-    cursor: pointer;
     margin-top: 28px;
     width: 34px;
 }
 
-.column .column-top1 a {
+.column li a {
     display: block;
     color: #fff;
     text-decoration: none;
@@ -543,17 +544,10 @@ table {
 }
 
 .column .ct1 {
-    cursor: pointer;
     width: 34px;
     height: 42px;
     line-height: 42px;
     left: 0;
-}
-
-.column .ct1 a {
-    display: block;
-    color: #ddd;
-    text-decoration: none;
 }
 
 .column .icon-top {
@@ -576,7 +570,120 @@ table {
     height: 42px;
 }
 
-.column .column-intro:nth-of-type(7) a {
+.column .column-top8 .column-intropic {
+    position: absolute;
+    display: none;
+    right: 32px;
+    width: 106px;
+    height: 144px;
+}
+
+.column .column-top8 .column-intropic a {
+    display: block;
+    width: 106px;
+    height: 144px;
+    background: url(//status.tuanimg.com/statics/zhe/components/sidebar/img/side_two_dimension.png) no-repeat 0 0;
+    margin-right: -20px;
+}
+
+.column .column-btn {
+    display: none;
+}
+
+.activecolor {
+    background: #c7000b;
+} */
+
+.column {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 34px;
+    background-color: #000;
+    height: 100%;
+    min-height: 594px;
+    z-index: 10001;
+    visibility: visible;
+    left: auto;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    text-align: center;
+}
+
+.column .column-top1 {
+    cursor: pointer;
+    margin-top: 28px;
+    width: 34px;
+}
+
+.column .column-top1 a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.column .column-top1 a:hover {
+    background: #c7000b;
+}
+
+.column .column-top1 .column-gw {
+    margin: 8px auto;
+    font-size: 12px;
+    text-align: center;
+    width: 20px;
+}
+
+.column .column-top1 em {
+    display: block;
+    padding-bottom: 6px;
+    color: red;
+}
+
+.column .ct1 {
+    position: relative;
+    cursor: pointer;
+    width: 34px;
+    height: 42px;
+    line-height: 42px;
+    left: 0;
+}
+
+.column .ct1 a {
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+}
+
+.column .ct1:hover .column-intro {
+    display: block;
+}
+
+.column .ct1:hover {
+    background: #c7000b;
+}
+
+.column .icon-top {
+    width: 34px;
+    height: 42px;
+    background: url(//z5.tuanimg.com/v2/core/img/sidePanelIconsNew.png) no-repeat -554px 0;
+}
+
+.column .column-intro {
+    position: absolute;
+    display: none;
+    background: #c7000b;
+    top: 0;
+    right: 0;
+}
+
+.column .column-intro a {
+    display: block;
+    width: 100px;
+    height: 42px;
+}
+
+.column .column-intro .column-pic {
     display: block;
     width: 106px;
     height: 144px;
@@ -584,12 +691,13 @@ table {
     margin-right: -2px;
 }
 
+.column .column-right {
+    right: 34px !important;
+}
 
-/* .column .column-btn {
-    /* display: none; */
-
-
-/* }  */
+.column .column-btn {
+    display: none;
+}
 
 .activecolor {
     background: #c7000b;

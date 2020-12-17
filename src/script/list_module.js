@@ -1,4 +1,4 @@
-define(['pagination', 'jlazyload'], function() {
+define(['pagination', 'jlazyload', 'jcookie'], function() {
     return {
         init: function() {
             const $list = $('.list ul');
@@ -10,7 +10,6 @@ define(['pagination', 'jlazyload'], function() {
                 url: 'http://10.31.161.111:8080/dashboard/zhe800/php/pagelist.php',
                 dataType: 'json'
             }).done(function(datalist) {
-                console.log(datalist);
                 data = datalist.pagedata;
                 let $strhtml = '';
                 $.each(data, function(index, value) {
@@ -64,7 +63,6 @@ define(['pagination', 'jlazyload'], function() {
                                 $array_default[index] = $(this);
                                 $array[index] = $(this);
                             });
-                            console.log($array_default);
                         });
                     }
                 });
@@ -106,8 +104,34 @@ define(['pagination', 'jlazyload'], function() {
                         $list.append(value);
                     });
                 });
+                let arrsid = [];
+                let arrnum = [];
 
-
+                function getcookietoarray() {
+                    if ($.cookie('cookiesid') && $.cookie('cookienum')) {
+                        arrsid = $.cookie('cookiesid').split(',');
+                        arrnum = $.cookie('cookienum').split(',');
+                    } else {
+                        arrsid = [];
+                        arrnum = [];
+                    }
+                }
+                getcookietoarray();
+                $(".column-top1 em").html(arrsid.length);
+            });
+            const $columnbtn = $(".column-btn");
+            $(window).on("scroll", () => {
+                let $scrolltop = $(window).scrollTop();
+                if ($scrolltop >= 400) {
+                    $columnbtn.show();
+                } else {
+                    $columnbtn.hide();
+                }
+            });
+            $columnbtn.on("click", function() {
+                $("html").stop(true).animate({
+                    top: 0
+                })
             });
         }
     }

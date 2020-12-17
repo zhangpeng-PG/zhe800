@@ -1,26 +1,24 @@
 define([], () => {
     return {
         init: function() {
-            const $username = $('#username');
-            const $password = $('#password');
-            const $login = $('#login'); //登录按钮
-
-            $login.on('click', function() {
+            const $tel = $('#tel');
+            const $pwd = $('#pwd');
+            const $smt = $('.smt');
+            $smt.on('click', function() {
                 $.ajax({
                     type: 'post',
-                    url: 'http://localhost:8080/dashboard/JS2010/projectname/php/login.php',
+                    url: 'http://10.31.161.111:8080/dashboard/zhe800/php/login.php',
                     data: {
-                        user: $username.val(),
-                        pass: $password.val()
+                        tel: $tel.val(),
+                        pwd: $pwd.val()
                     }
                 }).done(function(data) {
-                    if (!data) { //登录失败
+                    if (!data) {
                         alert('用户名或者密码有误!');
-                        $password.val(''); //密码清空
-                    } else { //登录成功
-                        location.href = 'index.html'; //前端和前端进行页面的通信，相对路径即可，如果是前后端的通信一定是觉对路径。
-                        //存储用户名，方便首页获取。
-                        localStorage.setItem('loginname', $username.val());
+                        $pwd.val('');
+                    } else {
+                        location.href = 'index.html';
+                        $.cookie('loginname', $tel.val());
                     }
                 })
             });

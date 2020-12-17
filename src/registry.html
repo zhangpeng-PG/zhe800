@@ -19,33 +19,34 @@
             <img src="//status.tuanimg.com/statics/zhe/dealList/img/login_logo.jpg" alt="">
         </a>
         <p class="login-header-r">
-            <span>还没有账号?</span>
-            <a href="registry.html" target="_blank">立即注册</a>
+            <span>已有团800或折800账号了？</span>
+            <a href="login.html" target="_blank">去登录</a>
         </p>
     </div>
     <!-- 主体 -->
     <div class="registry-main">
         <div class="registry-main-l">
-            <form action="">
-                <div class="registry-a"> <label for="">手机号:</label> <input type="text" class="registry-p"></div>
-                <span>为了你的账号安全，请使用常用的手机号</span>
-                <div class="registry-b"><label for="">密码:</label> <input type="password" class="registry-p"></div>
-                <span>6-24位数字字母或者半角符号组成</span>
-                <div class="registry-c"><label for="">确认密码:</label> <input type="password" class="registry-p"></div>
-                <span>请再次输入密码</span>
+            <form action="http://10.31.161.111:8080/dashboard/zhe800/php/reg.php" method="post" id="form1">
+                <div class="registry-a"> <label for="">手机号:</label> <input type="text" class="registry-p" name="tel" placeholder="手机号码"></div>
+                <span></span>
+                <div class="registry-b"><label for="">密码:</label> <input type="password" class="registry-p" name="password"></div>
+                <span></span>
+                <div class="registry-c"><label for="">确认密码:</label> <input type="password" class="registry-p" name="confirmpwd"></div>
+                <span></span>
                 <!-- 滑块 -->
                 <div class="registry-slide-box">
                     请按住滑块，拖动到最右边
                     <div class="registry-slide">>></div>
                 </div>
                 <p class="registry-smtp">
-                    <input checked="checked" id="inputacc" type="checkbox"> 我已阅读并接受折800的
+                    <input checked="checked" id="inputacc" type="checkbox" name="checkbox"> 我已阅读并接受折800的
                     <a target="_blank" href="http://help.zhe800.com/detail/82">《用户服务协议》</a> </p>
-                <input type="submit" value="同意协议并注册" class="registry-smt">
+                <span></span>
+                <input type="submit" value="同意协议并注册" class="registry-smt" name="submit">
             </form>
         </div>
     </div>
-    <!-- 尾部 -->
+    <!-- 尾部 -->=
     <div class="footer-intro ">
         <p>
             <a href="# ">京ICP证120075号</a>

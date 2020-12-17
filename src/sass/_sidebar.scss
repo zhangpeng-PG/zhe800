@@ -87,14 +87,56 @@
             .cartlist {
                 display: none;
                 .cartlist-l {
+                    float: left;
                     a {
+                        font-size: $font12;
                         color: red;
                         text-decoration: none;
                     }
+                    ul {
+                        width: 240px;
+                        li {
+                            float: left;
+                            margin: 6px;
+                            padding: 4px;
+                        }
+                    }
+                }
+                .cartlist-r {
+                    float: right;
+                    width: 115px;
+                    height: 282px;
+                }
+            }
+            .cartlist-r-t {
+                width: 115px;
+                height: 88px;
+                margin-bottom: 5px;
+                img {
+                    width: 115px;
+                }
+            }
+            .cartlist-r-c {
+                width: 115px;
+                height: 90px;
+                margin-bottom: 5px;
+                img {
+                    width: 115px;
+                }
+            }
+            .cartlist-r-b {
+                width: 115px;
+                height: 90px;
+                img {
+                    width: 115px;
                 }
             }
             h3 {
-                border-bottom: 1px solid red;
+                width: 240px;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                color: red;
+                border-bottom: 1px solid #ccc;
             }
         }
         .sidebarpic {

@@ -173,35 +173,6 @@ header {
     margin: 0 auto;
 }
 
-
-/* .header{
-	padding: 15px 0 10px 0;
-	overflow: hidden;
-}
-
-.header .logo{
-	width: 270px;
-	padding-left: 5px;
-	position: relative;
-	float: left;
-}
-.header .logo .link1{
-	display: block;
-}
-
-.header .logo .link2{
-	position: absolute;
-	right: 0;
-	top: 10px;
-	background: white;
-}
-
-.link2 b{
-	display: block;
-	width: 100px;
-	height: 40px;
-} */
-
 .cart-search {
     float: right;
     border: 2px solid #c91623;

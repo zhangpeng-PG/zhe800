@@ -13,9 +13,6 @@
         padding: 0;
         font-size: 12px;
         text-align: center;
-        li {
-            position: relative;
-        }
         .column-top1 {
             cursor: pointer;
             margin-top: 28px;
@@ -24,6 +21,9 @@
                 display: block;
                 color: #fff;
                 text-decoration: none;
+                &:hover {
+                    background: #c7000b;
+                }
             }
             .column-gw {
                 margin: 8px auto;
@@ -38,6 +38,7 @@
             }
         }
         .ct1 {
+            position: relative;
             cursor: pointer;
             width: 34px;
             height: 42px;
@@ -48,6 +49,12 @@
                 color: #ddd;
                 text-decoration: none;
             }
+            &:hover .column-intro {
+                display: block
+            }
+            &:hover {
+                background: #c7000b;
+            }
         }
         .icon-top {
             width: 34px;
@@ -57,7 +64,7 @@
         .column-intro {
             position: absolute;
             display: none;
-            background: tomato;
+            background: #c7000b;
             top: 0;
             right: 0;
             a {
@@ -65,21 +72,22 @@
                 width: 100px;
                 height: 42px;
             }
-            &:nth-of-type(7) {
-                a {
-                    display: block;
-                    width: 106px;
-                    height: 144px;
-                    background: url(//status.tuanimg.com/statics/zhe/components/sidebar/img/side_two_dimension.png) no-repeat 0 0;
-                    margin-right: -2px;
-                }
+            .column-pic {
+                display: block;
+                width: 106px;
+                height: 144px;
+                background: url(//status.tuanimg.com/statics/zhe/components/sidebar/img/side_two_dimension.png) no-repeat 0 0;
+                margin-right: -2px;
             }
         }
-        // .column-btn {
-        //     display: none;
-        // }
+        .column-right {
+            right: 34px!important;
+        }
+        .column-btn {
+            display: none;
+        }
     }
     
     .activecolor {
-        background: tomato;
+        background: #c7000b;
     }

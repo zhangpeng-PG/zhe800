@@ -1,3 +1,7 @@
+html {
+  overflow-x: hidden;
+}
+
 .sidebar, .choice, .seckill, .recommend, .updated, .Pagination, .banner-footer, .footer, .footer .footer-c, .footer .footer-intro {
   width: 1200px;
   margin: 0 auto 30px;
@@ -322,12 +326,56 @@
 .sidebar .sidebar-c .sidebar-cl .cartlist {
   display: none;
 }
+.sidebar .sidebar-c .sidebar-cl .cartlist .cartlist-l {
+  float: left;
+}
 .sidebar .sidebar-c .sidebar-cl .cartlist .cartlist-l a {
+  font-size: 12px;
   color: red;
   text-decoration: none;
 }
+.sidebar .sidebar-c .sidebar-cl .cartlist .cartlist-l ul {
+  width: 240px;
+}
+.sidebar .sidebar-c .sidebar-cl .cartlist .cartlist-l ul li {
+  float: left;
+  margin: 6px;
+  padding: 4px;
+}
+.sidebar .sidebar-c .sidebar-cl .cartlist .cartlist-r {
+  float: right;
+  width: 115px;
+  height: 282px;
+}
+.sidebar .sidebar-c .sidebar-cl .cartlist-r-t {
+  width: 115px;
+  height: 88px;
+  margin-bottom: 5px;
+}
+.sidebar .sidebar-c .sidebar-cl .cartlist-r-t img {
+  width: 115px;
+}
+.sidebar .sidebar-c .sidebar-cl .cartlist-r-c {
+  width: 115px;
+  height: 90px;
+  margin-bottom: 5px;
+}
+.sidebar .sidebar-c .sidebar-cl .cartlist-r-c img {
+  width: 115px;
+}
+.sidebar .sidebar-c .sidebar-cl .cartlist-r-b {
+  width: 115px;
+  height: 90px;
+}
+.sidebar .sidebar-c .sidebar-cl .cartlist-r-b img {
+  width: 115px;
+}
 .sidebar .sidebar-c .sidebar-cl h3 {
-  border-bottom: 1px solid red;
+  width: 240px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: red;
+  border-bottom: 1px solid #ccc;
 }
 .sidebar .sidebar-c .sidebarpic li {
   position: absolute;
@@ -763,9 +811,6 @@
   font-size: 12px;
   text-align: center;
 }
-.column li {
-  position: relative;
-}
 .column .column-top1 {
   cursor: pointer;
   margin-top: 28px;
@@ -775,6 +820,9 @@
   display: block;
   color: #fff;
   text-decoration: none;
+}
+.column .column-top1 a:hover {
+  background: #c7000b;
 }
 .column .column-top1 .column-gw {
   margin: 8px auto;
@@ -788,6 +836,7 @@
   color: red;
 }
 .column .ct1 {
+  position: relative;
   cursor: pointer;
   width: 34px;
   height: 42px;
@@ -799,6 +848,12 @@
   color: #ddd;
   text-decoration: none;
 }
+.column .ct1:hover .column-intro {
+  display: block;
+}
+.column .ct1:hover {
+  background: #c7000b;
+}
 .column .icon-top {
   width: 34px;
   height: 42px;
@@ -807,7 +862,7 @@
 .column .column-intro {
   position: absolute;
   display: none;
-  background: tomato;
+  background: #c7000b;
   top: 0;
   right: 0;
 }
@@ -816,16 +871,22 @@
   width: 100px;
   height: 42px;
 }
-.column .column-intro:nth-of-type(7) a {
+.column .column-intro .column-pic {
   display: block;
   width: 106px;
   height: 144px;
   background: url(//status.tuanimg.com/statics/zhe/components/sidebar/img/side_two_dimension.png) no-repeat 0 0;
   margin-right: -2px;
 }
+.column .column-right {
+  right: 34px !important;
+}
+.column .column-btn {
+  display: none;
+}
 
 .activecolor {
-  background: tomato;
+  background: #c7000b;
 }
 
 /*# sourceMappingURL=index.css.map */

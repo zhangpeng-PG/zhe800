@@ -99,6 +99,7 @@ body {
     width: 240px;
     height: 32px;
     outline: 0;
+    color: #ccc;
     border: 1px solid #ccc;
     margin: 26px auto 13px 0;
 }
@@ -157,7 +158,6 @@ body {
 }
 
 .registry-main {
-    border: 1px solid red;
     background: #fff;
     padding: 40px 60px;
     width: 860px;
@@ -165,7 +165,6 @@ body {
 }
 
 .registry-main-l {
-    border: 1px solid red;
     width: 360px;
     font-size: 14px;
 }
@@ -173,50 +172,56 @@ body {
 .registry-main-l span {
     display: block;
     margin-left: 105px;
-    padding-top: 10px;
     padding-bottom: 10px;
+    width: 240px;
+    height: 16px;
+    font-size: 12px;
 }
 
 .registry-p {
-    border: 1px solid red;
-    margin: 10px;
+    margin: 6px;
     width: 240px;
     height: 32px;
-    text-align: right;
+    font-size: 12px;
+    color: #ccc;
 }
 
 .registry-a {
-    border: 1px solid red;
     padding-left: 42px;
 }
 
 .registry-b {
-    border: 1px solid red;
     padding-left: 54px;
 }
 
 .registry-c {
-    border: 1px solid red;
     padding-left: 25px;
 }
 
 .registry-smtp {
-    text-align: center;
+    padding-left: 76px;
+}
+
+.registry-smtp a {
+    text-decoration: none;
+    color: #333;
 }
 
 .registry-smt {
-    margin-left: 70px;
+    margin-left: 96px;
     width: 200px;
     height: 46px;
     margin-top: 10px;
     margin-bottom: 10px;
     background: red;
+    border: 1px solid red;
     color: #fff;
     outline: 0;
-    border: 1px solid red;
     border-radius: 6px;
 }
 
 .registry-slide-box {
     margin: 15px auto;
+    left: 36px;
+    width: 250px;
 }

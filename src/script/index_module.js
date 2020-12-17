@@ -1,4 +1,4 @@
-define(['jlazyload'], () => {
+define(['jcookie', 'jlazyload'], () => {
     return {
         init: function() {
             const $update = $(".updated-main");
@@ -79,37 +79,38 @@ define(['jlazyload'], () => {
             });
 
             //顶部悬浮
+            const $columnbtn = $(".column-btn");
             $(window).on("scroll", () => {
                     let $scrolltop = $(window).scrollTop();
                     if ($scrolltop >= 400) {
                         $suspend.stop(true).animate({
                             top: 0
                         })
+                        $columnbtn.show();
 
                     } else {
                         $suspend.stop(true).animate({
                             top: -82
                         })
+                        $columnbtn.hide();
                     }
                 })
-                //右边栏动画
-            const $columnlist = $(".column li");
-            const $columnintro = $(".column-intro");
-            $columnlist.hover(function() {
-                    $columnlist.eq($(this).index()).addClass("activecolor").siblings("li").removeClass("activecolor");
-                    $columnlist.eq($(this).index()).find("em").css("color", "#fff");
-                    if ($(this).index() - 1 < 0) {
-                        $columnintro.eq($(this).index() - 1).hide();
-                    }
-                    $columnintro.eq($(this).index() - 1).show();
-                },
-                function() {
-                    $columnlist.eq($(this).index()).removeClass("activecolor");
-                    $columnlist.eq($(this).index()).find("em").css("color", "red");
-                    $columnintro.eq($(this).index() - 1).hide();
-                });
-            //最下角点击
-            const $columnbtn = $(".column-btn");
+                //右边购物车
+            let arrsid = [];
+            let arrnum = [];
+
+            function getcookietoarray() {
+                if ($.cookie('cookiesid') && $.cookie('cookienum')) {
+                    arrsid = $.cookie('cookiesid').split(',');
+                    arrnum = $.cookie('cookienum').split(',');
+                } else {
+                    arrsid = [];
+                    arrnum = [];
+                }
+            }
+            getcookietoarray();
+            $(".column-top1 em").html(arrsid.length);
+
             $columnbtn.on("click", function() {
                 $("html").stop(true).animate({
                     top: 0

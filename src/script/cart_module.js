@@ -132,8 +132,8 @@ define(['jcookie'], () => {
 
 
             //6.删除
-            function delcookie(sid, arrsid) { //sid:当前删除的sid  arrsid:存放sid的数组[3,5,6,7]
-                let $index = -1; //删除的索引位置
+            function delcookie(sid, arrsid) {
+                let $index = -1;
                 $.each(arrsid, function(index, value) {
                     if (sid === value) {
                         $index = index;
@@ -150,7 +150,7 @@ define(['jcookie'], () => {
                 if (window.confirm('你确定要删除吗?')) {
                     $(this).parents('.goods-item').remove();
                     delcookie($(this).parents('.goods-item').find('img').attr('sid'), arrsid);
-                    calcprice(); //计算总价
+                    calcprice();
                 }
             });
 
@@ -158,12 +158,12 @@ define(['jcookie'], () => {
                 cookietoarray();
                 if (window.confirm('你确定要全部删除吗?')) {
                     $('.goods-item:visible').each(function() {
-                        if ($(this).find(':checkbox').is(':checked')) { //判断复选框是否选中
+                        if ($(this).find(':checkbox').is(':checked')) {
                             $(this).remove();
                             delcookie($(this).find('img').attr('sid'), arrsid);
                         }
                     });
-                    calcprice(); //计算总价
+                    calcprice();
                 }
             });
 
